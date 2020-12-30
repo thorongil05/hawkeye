@@ -6,6 +6,7 @@ It is a search engine based on the query-by-example paradigm: a user submit an i
 The fine-tuned model is in the `\model` directory. Each file contains a description of the step performed.
 
 Project files:
+- [Vantage Point Tree](./index_creation.ipynb)
 - [Model fine-tuning](./model_fine_tuning.ipynb)
 
 # Credits
