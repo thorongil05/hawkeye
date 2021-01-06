@@ -10,6 +10,7 @@ Project files:
 - [Model fine-tuning](./model_fine_tuning.ipynb)
 - [Feature Extraction](./feature_extraction.ipynb)
 - [Performance Evaluation](./evaluation.ipynb)
+- [Search Engine](./Retrieval.ipynb)
 
 # Credits
 
