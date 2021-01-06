@@ -8,6 +8,7 @@ The fine-tuned model is in the `\model` directory. Each file contains a descript
 Project files:
 - [Vantage Point Tree](./index_creation.ipynb)
 - [Model fine-tuning](./model_fine_tuning.ipynb)
+- [Performance Evaluation](./evaluation.ipynb)
 
 # Credits
 
