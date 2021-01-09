@@ -9,7 +9,7 @@ Project files:
 - [Vantage Point Tree](./index_creation.ipynb)
 - [Model fine-tuning](./model_fine_tuning.ipynb)
 - [Feature Extraction](./feature_extraction.ipynb)
-- [Performance Evaluation](./evaluation.ipynb)
+- [Performance Evaluation](./performanceevaluation.ipynb)
 - [Search Engine](./Retrieval.ipynb)
 
 # Credits
