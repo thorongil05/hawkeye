@@ -12,6 +12,9 @@ Project files:
 - [Performance Evaluation](./performance_evaluation.ipynb)
 - [Search Engine](./retrieval.ipynb)
 
+
+The load_img function of the Keras preprocessing returns different values for pixels with respect to image_dataset_from_directory. We did a performance comparison to see the difference in terms of efficiency and effectiveness: [Pipelines performance comparison](./pipelines_performance_comparison.ipynb)
+
 # Credits
 
 @thorongil05, @matildao-pane, @ragnar1002, @nooshinnr, @seraogianluca
