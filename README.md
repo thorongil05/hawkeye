@@ -10,7 +10,7 @@ Project files:
 - [Model fine-tuning](./model_fine_tuning.ipynb)
 - [Feature Extraction](./feature_extraction.ipynb)
 - [Search Engine](./retrieval.ipynb) 
-- [Performance Evaluation](./performance_evaluation.ipynb)
+- [Performance Evaluation](./performances_eval.ipynb)
 
 # Query pre-processing pipeline issue
 During search engine developing, we found that using the following preprocessing pipeline gives us strange results:
