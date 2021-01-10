@@ -9,8 +9,8 @@ Project files:
 - [Vantage Point Tree](./index_creation.ipynb)
 - [Model fine-tuning](./model_fine_tuning.ipynb)
 - [Feature Extraction](./feature_extraction.ipynb)
-- [Performance Evaluation](./performance_evaluation.ipynb)
 - [Search Engine](./retrieval.ipynb) 
+- [Performance Evaluation](./performance_evaluation.ipynb)
 
 # Query pre-processing pipeline issue
 During search engine developing, we found that using the following preprocessing pipeline gives us strange results:
