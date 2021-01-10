@@ -10,10 +10,17 @@ Project files:
 - [Model fine-tuning](./model_fine_tuning.ipynb)
 - [Feature Extraction](./feature_extraction.ipynb)
 - [Performance Evaluation](./performance_evaluation.ipynb)
-- [Search Engine](./retrieval.ipynb)
+- [Search Engine](./retrieval.ipynb) 
 
-
-The load_img function of the Keras preprocessing returns different values for pixels with respect to image_dataset_from_directory. We did a performance comparison to see the difference in terms of efficiency and effectiveness: [Pipelines performance comparison](./pipelines_performance_comparison.ipynb)
+# Query pre-processing pipeline issue
+During search engine developing, we found that using the following preprocessing pipeline gives us strange results:
+```
+query = tf.keras.preprocessing.image.load_img(path_to_query, target_size=(224,224), interpolation='bilinear')
+query = tf.keras.preprocessing.image.img_to_array(query)
+query= tf.keras.applications.mobilenet_v2.preprocess_input(query)
+query = np.array([query])
+```
+A careful investigation let us discover that loading the query using this pipeline gives us different results in terms of pixels, and so features, compared to what we obtain using the `image_dataset_from_directory` function. We decided to use the same pipeline used in the `image_dataset_from_directory` to avoid such discrepancy and have good results. Moreover, we investigate the performance of the two functions the code is available in this notebook: [Pipelines performance comparison](./pipelines_performance_comparison.ipynb)
 
 # Credits
 
