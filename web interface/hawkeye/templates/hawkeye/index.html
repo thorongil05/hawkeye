@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{% static 'hawkeye/style.css' %}">
+        <link rel="shortcut icon" href="{% static 'hawkeye/images/favicon.png' %}">
+        <title>Hawkeye Image Search Engine</title>
+        <script>
+            function readURL(input) {
+                console.log(input.files)
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        document.getElementById('query').src=e.target.result
+                        document.getElementById('query').style.visibility = "visible"
+               
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id='wrapper'>
+            <img id='logo'src="\static\hawkeye\images\111.png" alt="">
+        </div>
+        <div id='outer2'>   
+            <div id='main'>
+                <!--action gli do l'url a cui sottomettere il form, devo mappare in url.py -->
+                <form method="post" action="" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    <input type="file" id="queryimg" name="query_img"  onchange='readURL(this)'accept="image/png, image/jpeg"  />
+                    <button type="submit" id=''>Search</button>
+                    {{ form }}
+                </form>
+               
+                {% if results_url %}
+                    <img id='query' src="{{ uploaded_file_url }}" alt="{{ img_url }}">
+                {% else %}
+                    <img id='query' src="x" alt="{{ img_url }}">
+                {% endif %}                
+            </div>
+        </div>
+        {% if results_url %}
+            <div id='outer3'>
+                <div id='main2'> 
+                <h2>Results:</h2> 
+                    <table class="editorDemoTable" style="height: 30px; width: 491px;">
+                        <tbody>
+                            <div style="width:900px; height:1000px;margin-left: 70px;">
+                                {% for img_url in results_url %}
+                                    <div style="float:left; width:180px; height:250px;">
+                                        <a href="{{ MEDIA_URL }}dataset/{{img_url}}">
+                                            <img class='resimg' src="{{ MEDIA_URL }}dataset/{{ img_url }}" alt="{{ img_url }}">
+                                        </a>
+                                    </div>
+                                {% endfor%}
+                            </div> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endif %}
+    </body>
+</html>
+
