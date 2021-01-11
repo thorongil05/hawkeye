@@ -11,7 +11,8 @@ Project files:
 - [Feature Extraction](./feature_extraction.ipynb)
 - [Search Engine](./retrieval.ipynb) 
 - [Performance Evaluation](./performances_eval.ipynb)
-- [Web Interface](./web_int.md)
+- [Web Interface](./webint.md)
+
 # Query pre-processing pipeline issue
 During search engine developing, we found that using the following preprocessing pipeline gives us strange results:
 ```
