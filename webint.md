@@ -1,6 +1,6 @@
 # Hawkeye: Image Search Engine - Web Interface
 
-The web interface of Hawkeye had been developed with the use of the Django Framework, used to develop web application with Python.
+The web interface of Hawkeye had been developed with the use of the Django Framework, used to develop web applications with Python.
 
 ## Usage Example
 
