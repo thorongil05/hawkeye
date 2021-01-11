@@ -1,6 +1,6 @@
 # Hawkeye: Image Search Engine - Web Interface
 
-The web interface of Hawkeye had been developed with the use of the Django Framework, used to develop web applications with Python.
+The web interface of Hawkeye had been developed with the use of the Django Framework, used to develop web applications with Python. In this repository the dataset and the index files were not uploaded.
 
 To make the retrieval search engine tensorflow code run on a local machine it was necessary to install:
 - Python 3.7.4
