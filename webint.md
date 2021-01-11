@@ -1,6 +1,11 @@
 # Hawkeye: Image Search Engine - Web Interface
 
 The web interface of Hawkeye had been developed with the use of the Django Framework, used to develop web applications with Python.
+To make the tensorflow code run on a local machine it was necessary to install:
+- Python 3.7.4
+- Cuda 11.2
+- Tensorflow 2.4
+- Keras 2.4.3
 
 ## Usage Example
 
