@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="{% static 'hawkeye/style.css' %}">
         <link rel="shortcut icon" href="{% static 'hawkeye/images/favicon.png' %}">
-        <title>Hawkeye Image Search Engine</title>
+        <title>Hawkeye</title>
         <script>
             function readURL(input) {
                 console.log(input.files)
@@ -32,7 +32,7 @@
                 <!--action gli do l'url a cui sottomettere il form, devo mappare in url.py -->
                 <form method="post" action="" enctype='multipart/form-data'>
                     {% csrf_token %}
-                    <input type="file" id="queryimg" name="query_img"  onchange='readURL(this)'accept="image/png, image/jpeg"  />
+                    <input type="file" id="queryimg" name="query_img"  onchange='readURL(this)'accept="image/png, image/jpeg"  required/>
                     <button type="submit" id=''>Search</button>
                     {{ form }}
                 </form>
